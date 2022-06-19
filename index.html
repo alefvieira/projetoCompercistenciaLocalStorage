@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Persistência LocalStorage</title>
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1>Aplicação de persistência para Inventário</h1>
+        </div>
+    </header>
+    <main>
+        
+        <div class="container">
+            <div class="formulario">
+                <div class="validacao"></div>
+                    <div class="campos-form">
+                        <label for="nome">Nome <span class="red">*</span></label>
+                        <input type="text" class="campotxt " id="nome"  placeholder="Escreva aqui seu Nome">    
+                    </div>
+                    <div class="campos-form">
+                        <label for="qtd">Quantidade <span class="red">*</span></label>
+                        <input type="number" class="campotxt" id="qtd"  min="1" value="1">
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="valor">Valor <span class="red">*</span></label>
+                        <input type="text" class="campotxt" id="valor"  placeholder="Informe o valor">
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="condicao">Condição <span class="red">*</span></label>
+                        <select id="condicao" class="campotxt">
+                            <option value=""></option>
+                            <option value="Novo">Novo</option>
+                            <option value="Semi Novo">Semi Novo</option>
+                            <option value="Usado">Usado</option>
+                        </select>
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="data-c">Data da Compra <span class="red">*</span></label>
+                        <input type="date" class="campotxt" id="data-c"  placeholder="Escreva a quantidade">    
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="fabric">Fabricante</label>
+                        <input type="text" class="campotxt" id="fabric"  placeholder="Informe o Fabricante">
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="campotxt" id="modelo"  placeholder="Informe o Modelo">
+
+                    </div>
+                    <div class="campos-form">
+                        <label for="n-serie">Nº de Serie</label>
+                        <input type="text" class="campotxt" id="n-serie"  placeholder="Informe o Nº de série">
+                    </div>
+
+                    <button class="botao-padrao" onclick="adicionar()">Salvar</button>
+                
+            </div>
+            <div class="list-invet">
+                <h2>Inventário</h2>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Valor</th>
+                                <th>Quantidade</th>
+                                <th>Condição</th>
+                                <th>data da Compra</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="informacaoDados"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <h5>Desenvolvido por Álef Vieira Coutinho</h5>
+    </footer>
+
+    <div id="modal-view">
+    </div>
+    <!-- <div class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="hideModal()">&times;</span>
+            <h3>Tem certeza que deseja excluir o item do Inventário? </h3>
+            <button class="botao-padrao" onclick="hideModal()">ok</button> 
+        </div>
+    </div> -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
